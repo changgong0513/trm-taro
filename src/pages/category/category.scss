@@ -1,5 +1,27 @@
+@import "~taro-ui/dist/style/components/flex.scss";
+@import "~taro-ui/dist/style/components/search-bar.scss";
+@import "~taro-ui/dist/style/components/button.scss";
+@import "~taro-ui/dist/style/components/icon.scss";
+@import "~taro-ui/dist/style/components/tabs.scss";
+@import "~taro-ui/dist/style/components/grid.scss";
+
 .category {
     flex-direction: column;
     width: 100%;
-  }
-  
+}
+
+.tab-content {
+  padding: 100px 50px;
+  font-size: 30px;
+  text-align: center;
+  background-color: #FAFBFC;
+}
+
+.tab-content--vertical {
+  height: 200PX;
+  padding: 100PX 50px;
+  font-size: 30px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #FAFBFC;
+}
