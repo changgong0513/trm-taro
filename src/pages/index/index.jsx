@@ -4,7 +4,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 
 // taro-ui
-import { AtSearchBar, AtTabs, AtTabsPane, AtGrid, AtList, AtListItem } from 'taro-ui'
+import { AtSearchBar, AtTabs, AtTabsPane, AtGrid, AtCard } from 'taro-ui'
 
 import { connect } from '@tarojs/redux'
 import { add, minus, asyncAdd } from '../../actions/counter'
@@ -84,59 +84,114 @@ class Index extends Component {
                 <View style='background-color: #FAFBFC;text-align: center;' >
                 <AtGrid data={[
                     {
-                      image: 'https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png'
+                      image: 'https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png',
+                      value: '土豆'
                     },
                     {
-                      image: 'https://img20.360buyimg.com/jdphoto/s72x72_jfs/t15151/308/1012305375/2300/536ee6ef/5a411466N040a074b.png'
+                      image: 'https://img20.360buyimg.com/jdphoto/s72x72_jfs/t15151/308/1012305375/2300/536ee6ef/5a411466N040a074b.png',
+                      value: '鸡肉'
                     },
                     {
-                      image: 'https://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                      image: 'https://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png',
+                      value: '猪肉'
                     },
                     {
-                      image: 'https://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png'
+                      image: 'https://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png',
+                      value: '牛肉'
                     },
                     {
-                      image: 'https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png'
+                      image: 'https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png',
+                      value: '鱼肉'
                     },
                     {
-                      image: 'https://img30.360buyimg.com/jdphoto/s72x72_jfs/t5770/97/5184449507/2423/294d5f95/595c3b4dNbc6bc95d.png'
+                      image: 'https://img30.360buyimg.com/jdphoto/s72x72_jfs/t5770/97/5184449507/2423/294d5f95/595c3b4dNbc6bc95d.png',
+                      value: '黄瓜'
                     },{
-                      image: 'https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png'
+                      image: 'https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png',
+                      value: '鸡蛋'
                     },
                     {
-                      image: 'https://img20.360buyimg.com/jdphoto/s72x72_jfs/t15151/308/1012305375/2300/536ee6ef/5a411466N040a074b.png'
+                      image: 'https://img20.360buyimg.com/jdphoto/s72x72_jfs/t15151/308/1012305375/2300/536ee6ef/5a411466N040a074b.png',
+                      value: '芸豆'
                     },
                     {
-                      image: 'https://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                      image: 'https://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png',
+                      value: '豇豆'
                     },
                     {
-                      image: 'https://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png'
+                      image: 'https://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png',
+                      value: '蒜薹'
                     },
                     {
-                      image: 'https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png'
+                      image: 'https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png',
+                      value: '韭菜'
                     },
                     {
-                      image: 'https://img30.360buyimg.com/jdphoto/s72x72_jfs/t5770/97/5184449507/2423/294d5f95/595c3b4dNbc6bc95d.png'
+                      image: 'https://img30.360buyimg.com/jdphoto/s72x72_jfs/t5770/97/5184449507/2423/294d5f95/595c3b4dNbc6bc95d.png',
+                      value: '菜花'
                     }]} />
                 </View>
               </AtTabsPane>
               <AtTabsPane current={this.state.current} index={1} >
-                <View style='background-color: #FAFBFC;text-align: center; padding: 0px;' >
-                <AtList hasBorder={true}>
-                  <AtListItem
-                    title='标题文字'
-                    note='描述信息'
-                    extraText='详细信息'
-                    arrow='right'
-                  />
-                  <AtListItem
-                    title='标题文字'
-                    note='描述信息'
-                    extraText='详细信息'
-                    arrow='right'
-                  />
-                </AtList>
-                  
+                <View className='example-item example-item--card' style='padding-top:5px;'>
+                  <AtCard
+                    note='小Tips'
+                    extra='额外信息'
+                    title='这是个标题1'
+                    thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                  >
+                    菜谱介绍1
+                  </AtCard>
+                </View>
+                <View className='example-item example-item--card' style='padding-top:5px;'>
+                  <AtCard
+                    note='小Tips'
+                    extra='额外信息'
+                    title='这是个标题2'
+                    thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                  >
+                    菜谱介绍2
+                  </AtCard>
+                </View>
+                <View className='example-item example-item--card' style='padding-top:5px;'>
+                  <AtCard
+                    note='小Tips'
+                    extra='额外信息'
+                    title='这是个标题3'
+                    thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                  >
+                    菜谱介绍3
+                  </AtCard>
+                </View>
+                <View className='example-item example-item--card' style='padding-top:5px;'>
+                  <AtCard
+                    note='小Tips'
+                    extra='额外信息'
+                    title='这是个标题4'
+                    thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                  >
+                    菜谱介绍4
+                  </AtCard>
+                </View>
+                <View className='example-item example-item--card' style='padding-top:5px;'>
+                  <AtCard
+                    note='小Tips'
+                    extra='额外信息'
+                    title='这是个标题5'
+                    thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                  >
+                    菜谱介绍5
+                  </AtCard>
+                </View>
+                <View className='example-item example-item--card' style='padding-top:5px;'>
+                  <AtCard
+                    note='小Tips'
+                    extra='额外信息'
+                    title='这是个标题6'
+                    thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
+                  >
+                    菜谱介绍6
+                  </AtCard>
                 </View>
               </AtTabsPane>
             </AtTabs>

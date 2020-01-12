@@ -6,8 +6,15 @@
 @import "~taro-ui/dist/style/components/grid.scss";
 @import "~taro-ui/dist/style/components/list.scss";
 @import "~taro-ui/dist/style/components/icon.scss";
+@import "~taro-ui/dist/style/components/card.scss";
 
 .index {
   flex-direction: column;
   width: 100%;
+}
+
+.panel__content {
+  .example-item + .example-item.example-item--card {
+    margin-top: 48px;
+  }
 }
