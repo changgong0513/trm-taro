@@ -177,6 +177,9 @@ class Category extends Component {
             <AtTabsPane tabDirection='vertical' current={this.state.current} index={6}>
               <View >畜禽肉类的内容</View>
             </AtTabsPane>
+            <AtTabsPane tabDirection='vertical' current={this.state.current} index={6}>
+              <View >奶、蛋及其制品类</View>
+            </AtTabsPane>
             <AtTabsPane tabDirection='vertical' current={this.state.current} index={7}>
               <View >鱼虾蟹贝类的内容</View>
             </AtTabsPane>
