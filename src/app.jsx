@@ -22,7 +22,8 @@ class App extends Component {
       'pages/index/index',
       'pages/category/category',
       'pages/analysis/analysis',
-      'pages/mine/mine'
+      'pages/mine/mine',
+      'pages/food-detail/food-detail'
     ],
     window: {
       backgroundTextStyle: 'light',

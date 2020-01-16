@@ -1,0 +1,13 @@
+@import "~taro-ui/dist/style/components/flex.scss";
+
+.food-detail {
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu-image {
+    width: 300px;
+    height: 300px;
+    background: #fff; 
+    padding: 10px 5px;
+}
